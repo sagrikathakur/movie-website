@@ -1,0 +1,250 @@
+*{
+  margin: 0;
+
+}
+body{
+  font-family: 'Courier New', Courier, monospace;
+}
+.navbar{
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+}
+.navbar-container{
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 100%;
+}
+.logo-container{
+flex:1;
+}
+.logo{
+  color: rgb(250, 246, 246);
+  font-size: 30px;
+  font-family: sans-serif;
+}
+.menu-container{
+flex: 6;
+
+}
+.menu-list{
+  display: flex;
+  color: azure;
+  list-style: none;
+}
+.menu-list-item{
+margin: 20px;
+}
+.profile-container{
+flex: 2;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+}
+.profile-text-container{
+  margin: 0 20px;
+   
+}
+.profile-picture{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.toggle{
+  width: 40px;
+  height: 20px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.toggle-icon{
+  color: gold;
+}
+.toggle-ball{
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s ease all;
+}
+.sidebar{
+  width: 50px;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  align-self: center;
+}
+.sidebar i{
+  color: white;
+}
+.left-menu-icon{
+color:white;
+font-size: 20px;
+margin-bottom: 50px;
+margin-left: 10px;
+}
+.container{
+background-color:#080808;
+min-height: calc(100vh - 50px);
+color: white;
+}
+.content-container{
+  margin-left: 50px;
+}
+.featured-content{
+  height: 50vh;
+  color: rgb(12, 139, 250);
+}
+.featured-title{
+  width: 200px;
+}
+.featured-desc{
+  width: 500px;
+  color: grey;
+  margin: 30px 0;
+  font-family: sans-serif;
+}
+.featured-button{
+  background-color: rgb(245, 230, 220);
+  color: rgb(6, 6, 6);
+  padding: 10px 20px;
+  margin: 7px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+
+}
+h1{
+  color:white;
+}
+
+.movie-list{
+  display: flex;
+  height: 300px;
+  align-items: center;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+.movie-list-container{
+  padding:  0 20px;
+}
+.movie-list-wrapper{
+  position: relative;
+  overflow: hidden;
+}
+.movie-list-item{
+  margin-right: 30px;
+  position: relative;
+}
+.movie-list-item:hover .movie-list-item-img{
+  transform: scale(1.2);
+  margin: 0 30px;
+}
+
+.movie-list-item:hover .movie-list-item-title,.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button{
+  opacity: 1;
+}
+
+.movie-list-item-img{
+  transition: all 1s ease-in-out;
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+
+}
+.movie-list-item-title{
+  background-color: #333;
+  padding: 0 10px;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top:10%;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+
+
+}
+.movie-list-item-desc{
+  background-color: #333;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top:30%;
+  left: 50px;
+  width: 230px;
+  opacity: 0;
+  transition: all ease-in-out;
+
+
+}
+.movie-list-item-button{
+  padding: 10px;
+  background-color: antiquewhite;
+  border-radius: 10%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left:50px;
+  opacity: 0;
+  transition: all ease-in-out;
+}
+.arrow{
+  font-size: 120px;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  color: rgb(199, 195, 195);
+  opacity: 0.5;
+  cursor: pointer;
+}
+.container.active{
+  background-color: white;
+  color: #000;
+}
+.movie-list-title.active{
+  color: #080808;
+}
+.navbar-container.active{
+  color: black;
+  background-color: white;
+}
+.sidebar.ative{
+  background-color: rgb(215, 17, 17);
+  color: aquamarine;
+}
+.left-menu-icon{
+  color: #000;
+}
+.toggle.active{
+  background-color: #000;
+}
+.toggle-ball.active{
+  background-color: white;
+  transform: translateX(-20px);
+}
+@media only screen and (max-width: 940px){  
+  .menu-container{
+    display: none;
+  }
+}
+  
